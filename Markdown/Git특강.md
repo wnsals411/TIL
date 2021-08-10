@@ -80,6 +80,27 @@ $git clone <원격저장소>
 - zip을 다운로드 받는 방법
 
   해당 저장소의 현재 버전의 파일을 가져옴 (.git폴더 미포함 - 버전관리 x)
+  
+  
+
+### 원격 저장소의 변경내역을 로컬 저장소에 반영하기
+
+- pull
+- 원격 저장소로부터 필요한 파일을 다운 + 병합
+
+```bash
+$git pull <저장소명> <브랜치> # 생략시 기본값은 origin master 또는 main
+													# clone 시 자동적으로 저장소명과 브랜치가 설정돼있음
+```
+
+- fetch
+- 원격 저장소로부터 필요한 파일을 다운 (병합은 별도로 해야 함)
+
+```bash
+$git fetch <저장소명> <브랜치>
+```
+
+
 
 
 
@@ -117,4 +138,75 @@ $mkdir [옵션] [파일명]	#옵션 생략시 기본값은 755 (rwe-421 user,gro
 ```bash
 $mv [파일명] [변경할명]
 ```
+
+
+
+### 터미널 스크린 지우기
+
+`Ctrl + l`
+
+
+
+### 0바이트 파일 생성
+
+```bash
+$touch [파일명.확장자]
+```
+
+
+
+
+
+## Branch 명령어
+
+### branch 생성
+
+```bash
+$git branch 브랜치이름
+```
+
+
+
+### branch 이동
+
+```bash
+$git checkout 브랜치이름
+```
+
+
+
+### branch 생성 및 이동
+
+```bash
+$git checkout -b 브랜치이름
+```
+
+
+
+### branch 조회
+
+```bash
+$git branch
+```
+
+
+
+### branch merge
+
+```bash
+(master) $git merge 브랜치이름
+```
+
+- master로 병합하려는 경우 master 브랜치에서 명령어를 작성해야 함!!
+- `브랜치이름` 을 해당 브랜치로 병합하는 명령어이기 때문
+
+
+
+### branch 삭제
+
+```bash
+$git branch -d 브랜치이름
+```
+
+
 
